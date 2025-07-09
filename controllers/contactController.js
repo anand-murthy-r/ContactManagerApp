@@ -12,7 +12,7 @@ const getContacts = async (req, res) => {
 //@route POST /api/contacts
 //@access public
 const createContact = asyncHandler(async (req, res) => {
-    console.log("Body:\n", req.body); 
+    // console.log("Body:\n", req.body); 
     const {name, phone, email} = req.body;
     if (!name || !phone || !email) {
         res.status(400);
@@ -67,4 +67,4 @@ const deleteContact = asyncHandler(async (req, res) => {
 });
 
 
-module.exports = {getContacts, createContact, getContact, updateContact, deleteContact };
+module.exports = { getContacts, createContact, getContact, updateContact, deleteContact };
